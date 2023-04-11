@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1:after {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgb(245, 39, 66) 14%, rgb(231, 231, 231) 14%);
+    position: absolute;
+    content: '';
+    height: 3px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+
+@layer components {
+  .card:hover {
+    @apply bg-red-500 ;
+    transform: translateY(5%);
+  }
+  .card:hover .icon {
+    @apply bg-white text-red-500;
+  }
+  .card:hover h3 {
+    @apply text-white
+  }
+  .card:hover p {
+    @apply text-white
+  }
+}
